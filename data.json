@@ -1,0 +1,240 @@
+
+
+{
+  "data": [
+    {
+      "id": 1,
+      "price": 5634,
+      "product": "snowboard",
+      "name": "Jones Mind Expander",
+      "count": 1,
+      "age": "adults",
+      "gender": "unisex",
+      "level": "expert",
+      "hardness": "1 of 10",
+      "geometry": "twin tip",
+      "size":"165",
+      "img": 
+      ["./src/images/productImages/j.mind1.jpg",
+        "./src/images/productImages/j.mind2.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "price": 554,
+      "product": "snowboard",
+      "name": "NIDECKER Playlight",
+      "count": 1,
+      "age": "adults",
+      "gender": "unisex",
+      "level": "beginner",
+      "hardness": "5 of 10",
+      "geometry": "Directional",
+       "size":"174",
+      "img": 
+      [
+        "./src/images/productImages/nidecker1.jpg",
+        "./src/images/productImages/nidecker2.jpg",
+        "./src/images/productImages/nidecker3.jpg"
+      ] 
+    },
+    {
+        "id": 3,
+        "price": 554,
+        "product": "snowboard",
+        "name": "JONES Flagship",
+        "count": 1,
+        "age": "kids",
+        "gender": "unisex",
+        "level": "racer",
+        "hardness": "8 of 10",
+        "geometry": "Directional",
+        "size":"165",
+        "img": 
+        [
+          "./src/images/productImages/j.flag1.jpg",
+          "./src/images/productImages/j.flag2.jpg",
+          "./src/images/productImages/j.flag3.jpg"
+        ]
+    },
+    {
+        "id": 4,
+        "price": 554,
+        "product": "snowboard",
+        "name": "BURTON Chopper",
+        "count": 1,
+        "age": "kids",
+        "gender": "unisex",
+        "level": "beginner",
+        "hardness": "6 of 10",
+        "geometry": "Camber",
+        "size":"165",
+        "img": 
+        ["./src/images/productImages/burton1.jpg",
+        "./src/images/productImages/burton2.jpg",
+        "./src/images/productImages/burton3.jpg"
+        ]
+    },
+    {
+        "id": 5,
+        "price": 457,
+        "product": "skis",
+        "name": "Van Deer",
+        "count": 1,
+        "age": "adults",
+        "gender": "unisex",
+        "level": "beginner",
+        "hardness": "Playful Flex",
+        "geometry": "",
+        "size":"175",
+        "img": 
+        ["./src/images/productImages/skisVan.jpg",
+        "./src/images/productImages/skisVan2.jpg",
+        "./src/images/productImages/skisVan3.jpg"
+        ]
+    },
+    {
+        "id": 6,
+        "price": 7540,
+        "product": "skis",
+        "name": "Salomon QST 98 Skis 2024",
+        "count": 1,
+        "age": "adults",
+        "gender": "unisex",
+        "level": "expert",
+        "hardness": "Stiff Flex",
+        "geometry": "",
+        "size":"169",
+        "img": 
+        ["./src/images/productImages/skisAtom.jpg",
+        "./src/images/productImages/skisAtom2.jpg",
+        "./src/images/productImages/skisAtom3.jpg"
+        ]
+    },
+    {
+        "id": 7,
+        "price": 9840,
+        "product": "skis",
+        "name": "k2 missy",
+        "count": 1,
+        "age": "kids",
+        "gender": "woman",
+        "level": "beginner",
+        "hardness": "Stiff Flex",
+        "size":"165",
+        "geometry": "",   
+        "img": 
+        ["./src/images/productImages/k2.1.jpg",
+        "./src/images/productImages/k2.2.jpg"
+        ]
+    },
+    {
+        "id": 8,
+        "price": 940,
+        "product": "boots",
+        "name": "Rossingnol​",
+        "count": 1,
+        "age": "adults",
+        "gender": "unisex",
+        "level": "beginner",
+        "hardness": "",
+        "geometry": "",
+        "size":43,
+        "img": 
+        ["./src/images/productImages/bootsChild1.jpg",
+        "./src/images/productImages/bootsChild2.jpg",
+        "./src/images/productImages/bootsChild3.jpg"
+        ]
+    },
+    {
+        "id": 9,
+        "price": 540,
+        "product": "boots",
+        "name": "DC Lotus Step On​",
+        "count": 1,
+        "age": "adults",
+        "gender": "women",
+        "level": "advanced",
+        "hardness": "",
+        "geometry": "",
+        "size":41,
+        "img": 
+        ["./src/images/productImages/bootsMen1.jpg",
+        "./src/images/productImages/bootsMen2.jpg"
+        ]
+    }, 
+    {
+      "id": 10,
+      "price": 540,
+      "product": "boots",
+      "name": "DC Lotus Step On​",
+      "count": 1,
+      "age": "adults",
+      "gender": "women",
+      "level": "advanced",
+      "hardness": "",
+      "geometry": "",
+      "size":41,
+      "img": 
+      ["./src/images/productImages/bootsWomen1.1.jpg",
+      "./src/images/productImages/bootsWomen1.2.jpg",
+      "./src/images/productImages/bootsWomen1.3.jpg"
+      ]
+    },
+    {
+    "id": 11,
+    "price": 540,
+    "product": "boots",
+    "name": "DC Lotus Step On​",
+    "count": 1,
+    "age": "adults",
+    "gender": "women",
+    "level": "advanced",
+    "hardness": "",
+    "geometry": "",
+    "size":41,
+    "img": 
+    ["./src/images/productImages/rosssing1.jpg",
+    "./src/images/productImages/rosssing2.jpg",
+    "./src/images/productImages/rosssing3.jpg"
+    ]
+    },
+    {
+      "id": 12,
+      "price": 654,
+      "product": "boots",
+      "name": "Rossingnol​",
+      "count": 1,
+      "age": "adults",
+      "gender": "women",
+      "level": "advanced",
+      "hardness": "",
+      "geometry": "",
+      "size":41,
+      "img": 
+      ["./src/images/productImages/rosssingWomen.jpg",
+      "./src/images/productImages/rosssingWomen2.jpg",
+      "./src/images/productImages/rosssingWomen3.jpg"
+      ]
+    },
+    {
+      "id": 13,
+      "price": 654,
+      "product": "boots",
+      "name": "Rossingnol Pro​",
+      "count": 1,
+      "age": "adults",
+      "gender": "women",
+      "level": "advanced",
+      "hardness": "",
+      "geometry": "",
+      "size":41,
+      "img": 
+      ["./src/images/productImages/rosssingWomen.jpg",
+      "./src/images/productImages/rosssingWomen2.jpg",
+      "./src/images/productImages/rosssingWomen3.jpg"
+      ]
+    }
+
+  ]
+}
