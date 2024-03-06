@@ -31,7 +31,7 @@ const BaseContent: React.FC = () => {
 
 
           {/*//////////////////footer///////////////////////// */}
-        <div className=" text-[#a6b6cf] bg-[rgb(0,_0,_0)]
+        <footer className=" text-[#a6b6cf] bg-[rgb(0,_0,_0)]
                          mt-[20px] w-full h-[150px]  text-xl
                          max-lg:h-[300px]">
           {/*////////////////1 part of footer////////////////*/}
@@ -53,7 +53,7 @@ const BaseContent: React.FC = () => {
               <p className="">T2R OG1</p>
             </div>
           </div>
-        </div>
+        </footer>
           <hr></hr>
 
           {/*/////////////////2 part of footer////////////////////////*/}

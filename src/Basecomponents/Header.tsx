@@ -1,29 +1,34 @@
 import React, { ReactElement, useContext, useState } from 'react'
 import ThemeSwichBtn from './ThemeSwichBtn';
 import { GiHamburgerMenu } from "react-icons/gi";
-import { CiShoppingBasket } from "react-icons/ci";
+import { FaCartShopping } from "react-icons/fa6";
 import { IoLocationSharp } from "react-icons/io5";
+import { FaHome } from "react-icons/fa";
 import { FaOpencart } from "react-icons/fa";
 import {Link} from 'react-router-dom';
 import { BaseContext } from "../context/ContextProvider";
 
-// здесь 2 функции:
-//1- ResoinsiveMenu
+
+
+// 1 -ResoinsiveMenu
 // функция для отображения адаптивного меню для десктоп,планшет и мобильных
-// в завимости от передваемых параметров (т.е. классов)
-//2- сам компонент Header
+// В ЗАВИСИМОСТИ ОТ ПЕРЕДОВАЕМЫХ ПАРАМНТРОВ (т.е. классов)
 
 
 const ResoinsiveMenu = (defaultClass:string,classFormobile1:string,classFormobile2:string):ReactElement=>{
 
   
- 
   return(
-      <div className={`${defaultClass}`}>
-       
+      <header className={`${defaultClass}`}>
+      
          
+       <Link to={'/'} className={`${classFormobile2}`}>
+        <div className={`${classFormobile1}`}><FaHome size={40} /></div>
+        <div >Home</div>
+      </Link>
+
       <Link to={'assortment'} className={`${classFormobile2}`}>
-        <div className={`${classFormobile1}`}><CiShoppingBasket size={40} /></div>
+        <div className={`${classFormobile1}`}><FaCartShopping size={40} /></div>
         <div >Assortment</div>
       </Link>
       
@@ -31,15 +36,19 @@ const ResoinsiveMenu = (defaultClass:string,classFormobile1:string,classFormobil
         <div className={`${classFormobile1}`}><IoLocationSharp  size={40}/></div>
         <div >location</div>
       </Link>
-    </div>
+    </header>
 )}
 
 const Header: React.FC = () =>{
 
-{/*состояние для моб.меню */}
-  
+
+  {/* 
+  *   ResoinsiveMenu - становится МОБИЛЬНОЙ ВЕРСИЕЙ если дисплей меньше 480px
+*/}
+   
   const [menuToggle,setMenuToggle] = useState<boolean>(false) 
   const {cartProduct} = useContext(BaseContext);
+
   return(
     <div className='text-[25px] flex items-center justify-between w-full h-[70px] bg-[rgb(240,_240,_240)] text-[#0a0a0a] max-exrtaSm:h-[50px] font-size: 20px; fixed z-[2]'> 
 
@@ -53,15 +62,16 @@ const Header: React.FC = () =>{
         <div className=' h-full w-full bg-[url(../public/img/logoImg.png)] bg-contain bg-no-repeat'></div>
       </div>
 
-       {/*функция для плашет,десктоп */}
+       {/* ResoinsiveMenu (header) -  для десктопа */}
        {ResoinsiveMenu(
        ' flex justify-around items-center w-[90%] h-full max-sm:hidden',
-       'hidden','')} 
+       'hidden','')
+       } 
 
-        {/*функция для моб. устройств. Если menuToggle = true, то показывай ResoinsiveMenu*/}
+        {/*ResoinsiveMenu - (sidebar) для моб. устройств.*/}
 
         {menuToggle&&ResoinsiveMenu(
-        'dark:bg-slate-700 dark:text-white  bg-[white] flex flex-col justify-around w-[200px] h-[20vh] text-xl absolute top-[100%] [box-shadow:6px_1px_7px_2px_rgba(34,_60,_80,_0.2)]  z-[1]  ',
+        'dark:bg-slate-700 dark:text-white  bg-[white] flex flex-col justify-around w-[200px] h-[70vh] text-xl absolute top-[100%] [box-shadow:6px_1px_7px_2px_rgba(34,_60,_80,_0.2)] z-[1]',
          //обе повтооряющиеся классы нужны для корректной работы меню для десктопа
         'h-full flex justify-around items-center ',
         'h-full flex justify-around items-center h-12 [border-bottom:1px_solid_silver]')}

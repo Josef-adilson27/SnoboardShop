@@ -1,8 +1,7 @@
 import React, { useContext,useState} from "react";
 import { BaseContext } from "../../context/ContextProvider";
 import Card from "./Card";
-import { HiArrowLeft } from "react-icons/hi";
-import { Link } from "react-router-dom";
+
 import Details from "./Details";
 import PaginationBtns from "./PaginationBtns";
 
@@ -40,7 +39,7 @@ const paginate = (PageNum:number) => setCurrPage(PageNum)
                        max-sm:grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))]">
         {/*маппинг карточек*/}
         {currPosts.length?currPosts.map(item=>(<Card key={item.id}  item={{...item}}/>))
-        :<h1 className='flex justify-center items-center w-full h-[50vh] text-4xl'>Ooops... Server denied. Please try: json-server --watch  data.json --port3031</h1>
+        :<h1 className='flex justify-center items-center w-full h-[50vh] text-4xl'>Ooops... Server denied. Please try: json-server --watch  data.json</h1>
         }
       </div>
 
