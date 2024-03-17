@@ -2,7 +2,7 @@ import "./index.css";
 import BaseContent from "./Basecomponents/BaseContent";
 import { ContextProvider } from "./context/ContextProvider";
 import React from "react";
-import Header from "./Basecomponents/Header";
+import Navbar from "./Basecomponents/Navbar";
 import Locations from "./Basecomponents/Locations";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
@@ -16,7 +16,7 @@ const App = () => {
     <div className="App dark:bg-slate-900 w-full min-h-[100vh] bg-[rgb(251,_251,_251)];  ">
       <ContextProvider>
         <BrowserRouter>
-          <Header/>       
+          <Navbar/>       
           <Routes>
             {/* BaseContent-первонач. страница */}
             <Route path="/" element={<BaseContent />} />
