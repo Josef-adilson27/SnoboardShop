@@ -37,8 +37,8 @@ const Locations: React.FC = () => {
   const [toggle, setToggle] = useState<toggleType>(init);
 
   const BanfSunshine = (
-    <div className="flex flex-col w-[90%] h-auto mb-[30px]">
-      <div className="flex items-center max-lg:flex-col">
+    <div className="flex flex-col w-[90%] h-auto mb-[30px] ">
+      <div className="flex items-center max-lg:flex-col ">
         <img src={ImgBanf1} className="w-[600px] object-contain  m-[10px]" alt="" />
         <div className="p-3 text-2xl">
           <h1 className="p-3 text-2xl">STORYBOOK SCENERY</h1>
@@ -173,7 +173,7 @@ const Locations: React.FC = () => {
   const Norquay = (
     <div className="flex flex-col w-[90%] h-auto mb-[30px]">
       <div className="flex items-center max-lg:flex-col">
-        <img src={ImgNorquay1} className="w-[700px] object-contain m-[10px]" alt="" />
+        <img src={ImgNorquay1} className="w-[700px] object-contain m-[10px] " alt="" />
         <div className="p-3 text-2xl">
           <h1 className="p-3 text-2xl">STORYBOOK SCENERY</h1>
           <p className="text-xl">
@@ -221,6 +221,7 @@ const Locations: React.FC = () => {
       </div>
     </div>
   );
+
   ///функция возвращает jsx-переменные (BanfSunshine,LakeLouise,Norquay) взависимости от стейтa toggle
   /// подробнее...
   ///по нажатию на кнопку (more about), мы инвертируем (true/false) конкретное свойство из стейта ( см. init)
@@ -240,7 +241,7 @@ const Locations: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col items-center w-full h-auto overflow-auto">
+    <div className="flex flex-col items-center w-full h-auto overflow-auto dark:text-white">
       <div className="flex flex-col items-center mt-[60px] w-full h-auto">
         <h1 className="titleFont text-[80px] max-md:text-[60px] max-sm:text-[40px]">
           Map of area
@@ -252,13 +253,14 @@ const Locations: React.FC = () => {
           className="mt-[50px] mb-[50px] px-[20px] py-[0] w-full h-auto flex justify-center 
                      max-lg:flex max-lg:items-center max-lg:flex-col">
          {/*Карточки локации (функции)*/}
+
          {/* 1 Карточка*/}
 
          <div className="flex flex-col items-center">
 
-          <div className=" dark:bg-[#1e2b1a]  dark:text-white bg-[#dee8dc] flex items-center flex-col  w-[400px] h-[500px] object-cover m-3 max-lg:w-full">
+          <div className=" dark:bg-[#1e2b1a] rounded-2xl  dark:text-white bg-[#dee8dc] flex items-center flex-col  w-[400px] h-[500px] object-cover m-3 max-lg:w-full">
               <img
-                className="w-full h-[250px] object-cover object-bottom"
+                className="w-full h-[250px] object-cover object-bottom rounded-2xl"
                 src={Img2}
                 alt=""
               />
@@ -290,9 +292,9 @@ const Locations: React.FC = () => {
          {/* 2 Карточка*/}
          <div className="flex flex-col items-center">
 
-          <div className=" dark:bg-[#1e2b1a]  dark:text-white bg-[#dee8dc] flex items-center flex-col  w-[400px] h-[500px] object-cover m-3 max-lg:w-full">
+          <div className=" dark:bg-[#1e2b1a]  dark:text-white rounded-2xl bg-[#dee8dc] flex items-center flex-col  w-[400px] h-[500px] object-cover m-3 max-lg:w-full">
     <img
-      className="w-full h-[250px] object-cover object-bottom"
+      className="w-full h-[250px] object-cover object-bottom rounded-2xl"
       src={Img3}
       alt=""
     />
@@ -322,10 +324,10 @@ const Locations: React.FC = () => {
           </div>
 
          {/* 3 Карточка*/}   
-         <div className="flex flex-col items-center">
-           <div className=" dark:bg-[#1e2b1a]  dark:text-white bg-[#dee8dc] flex items-center flex-col  w-[400px] h-[500px] object-cover m-3 max-lg:w-full">
+         <div className="flex flex-col items-center bg-transparent ">
+           <div className=" dark:bg-[#1e2b1a]  dark:text-white bg-[#dee8dc] rounded-2xl flex items-center flex-col  w-[400px] h-[500px] object-cover m-3 max-lg:w-full">
             <img
-              className="w-full h-[250px] object-cover object-bottom"
+              className="w-full h-[250px] object-cover object-bottom rounded-t-2xl"
               src={Img4}
               alt=""
             />
@@ -356,11 +358,13 @@ const Locations: React.FC = () => {
          </div> 
 
          </div> 
+
           {/* фукциия для отображения  деталей карточек.При 976px- скрывается. Потом появляется под каждой карточкой */}
           <div className="max-lg:hidden">{LocationDetailsRender()}</div>   
       </div>
     </div>
   );
+
 };
 
 export default Locations;

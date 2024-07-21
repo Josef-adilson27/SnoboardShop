@@ -35,6 +35,9 @@ const Cart: React.FC = () =>{
               Сheckout
             </button>    
         </div>
+        <div className="w-full h-[300px] absolute bg-gray-00">
+            
+          </div> 
       </div>
     </div>
   )

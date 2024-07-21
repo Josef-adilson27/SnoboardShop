@@ -34,7 +34,7 @@ const ThemeSwichBtn: React.FC = () =>{
 
   return(
     <div onClick={themeToggle} className="toggleBtnWrapper">
-      <div className='ball'></div>
+      <div className='ball dark:bg-slate-600'></div>
     </div>
   )
 }

@@ -1,40 +1,71 @@
-import React, { useState, useContext } from 'react'
-import { FaArrowCircleRight } from "react-icons/fa";
-import { FaArrowCircleLeft } from "react-icons/fa";
-import { BaseContext } from "../context/ContextProvider";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import React from "react";
+import { FaArrowCircleRight, FaArrowCircleLeft } from "react-icons/fa";
+import img1 from "../images/begginer1.jpg";
+import img2 from "../images/begginer2.jpg";
+import img3 from "../images/food3.jpg";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 
+const Trainy: React.FC = () => {
 
-const Trainy: React.FC = () =>{
-
-  const {setImage} = useContext(BaseContext);
-
-  const images:string[] = ['/images/bigginer3.jpg','/images/begginer1.jpg','/images/begginer2.jpg']
-
-  const [imgState,setImgState] = useState(0);
- 
+  
+  const images: string[] = [img1, img2, img3];
+  const slider = React.useRef(null);
 
 
-  return(
-    <div className='w-full h-full dark:bg-black dark:text-white'>
-        <div className='s w-full h-full relative'>
-            <img  src={`/src${images[imgState]}`} className='object-cover  w-full h-full  '  alt="" />
-            <div className=' first-letter:flex flex-col  absolute top-[0] w-full h-full '>
-               <div className='s flex justify-around flex-col items-center w-full h-4/5'>
-                 <p className='text-[40px] titleFont flex flex-wrap text-center max-sm:text-[10vw]'>For begginers</p>
-               </div>
-              <div className='flex justify-center flex-col items-center w-full h-1/5'>
-                <button  className='z-[1] w-[150px] h-[30px] bg-[--primary-color]  text-xl'>BUY THIS TICKET</button>
-              </div>
-            </div>
-            <div className='absolute flex items-center top-[0] w-full h-full'>
-              <div className='flex justify-between w-full h-[50px] p-[5px]'>
-               <button onClick={()=>setImage(imgState,setImgState,images)}><FaArrowCircleLeft size={'30px'}/></button>
-               <button onClick={()=>setImage(imgState,setImgState,images)}><FaArrowCircleRight size={'30px'}/></button>
-              </div>
-            </div>
-        </div>
+  function SampleNextArrow(props:any) {
+    const { onClick } = props;
+    return (
+      <div
+        onClick={onClick}
+        className="absolute right-1 top-0 flex items-center  w-[30px] z-10 h-full "
+      >
+        <FaArrowCircleRight size={50} />
       </div>
-  )
-}
+    );
+  }
+
+
+  function SamplePrevArrow(props:any) {
+    const { onClick } = props;
+    return (
+      <div
+        onClick={onClick}
+        className="absolute flex left-1 items-center  w-[30px] z-10 h-full "
+      >
+        <FaArrowCircleLeft size={50} />
+      </div>
+    );
+  }
+
+  const settings = {
+    dots: false,
+    infinite: true,
+    arrows: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    nextArrow: <SampleNextArrow /> ,
+    prevArrow: <SamplePrevArrow />,
+  };
+
+  return (
+    <div className=" flex justify-center w-full h-[400px] dark:bg-black dark:text-white">
+    <div className="w-full h-[200px] relative ">
+      <Slider ref={slider} {...settings} className="h-[400px] ">
+        {images.map((item) => (
+          <img
+            src={item}
+            className=" h-[410px] object-cover object-center w-full rounded-xl"
+            alt=""
+          />
+        ))}
+      </Slider>
+    </div>
+  </div>
+  );
+};
 export default Trainy;

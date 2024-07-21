@@ -20,8 +20,8 @@ const PaginationBtns: React.FC<PropsType> = ({postsPerPage,totalPosts,paginate})
     <div className='flex justify-center w-full h-[30px] mt-[50px] mb-[50px] rounded-[3]'>
       {
        PageNum.map(item=>(
-          <div className='flex justify-around [80px] h-full ' key={item}>
-              <button className='w-[50px] h-full paginationBgColor' onClick={()=>paginate(item)}>{item}</button>
+          <div className='flex' key={item}>
+              <button className='w-[50px] h-full bg-primary-color rounded-lg mx-1 text-white' onClick={()=>paginate(item)}>{item}</button>
           </div>        
        ))
       }          

@@ -4,26 +4,21 @@ import Card from "./Card";
 
 import Details from "./Details";
 import PaginationBtns from "./PaginationBtns";
-
 const Assortment: React.FC = () => {
 //основной стейт товаров
 const {product} = useContext(BaseContext);
-
 //стейы для пагинации
 const [currPage,setCurrPage] = useState(1) 
 //колл. карточек
 const [postsPerPage] = useState(10)
-
 const lastIndex  = currPage*postsPerPage; 
 const firstIndex = lastIndex-postsPerPage;
 //вырезаем из основного стейта
 const currPosts  = product.slice(firstIndex,lastIndex)
-
 const paginate = (PageNum:number) => setCurrPage(PageNum)
 
 
   return (
-
 
     <div className=" dark:text-white [100%]">
       
@@ -46,7 +41,7 @@ const paginate = (PageNum:number) => setCurrPage(PageNum)
          {/*пагинация страниц*/}
         <PaginationBtns postsPerPage={postsPerPage} totalPosts={product.length} paginate={paginate}/>
     </div>
-    
   );
 };
+
 export default Assortment;

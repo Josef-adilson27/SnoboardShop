@@ -7,7 +7,7 @@ import { FaHome } from "react-icons/fa";
 import { FaOpencart } from "react-icons/fa";
 import {Link} from 'react-router-dom';
 import { BaseContext } from "../context/ContextProvider";
-
+import {home,assorment,locations,stay,skis} from '../Links'
 
 
 // 1 -ResoinsiveMenu
@@ -22,20 +22,31 @@ const ResoinsiveMenu = (defaultClass:string,classFormobile1:string,classFormobil
       <header className={`${defaultClass}`}>
       
          
-       <Link to={'/'} className={`${classFormobile2}`}>
+       <Link to={home} className={`${classFormobile2}`}>
         <div className={`${classFormobile1}`}><FaHome size={40} /></div>
-        <div >Home</div>
+        <div>Home</div>
       </Link>
 
-      <Link to={'assortment'} className={`${classFormobile2}`}>
+      <Link to={assorment} className={`${classFormobile2}`}>
         <div className={`${classFormobile1}`}><FaCartShopping size={40} /></div>
-        <div >Assortment</div>
+        <div>Assortment</div>
       </Link>
       
-      <Link to={'location'} className={`${classFormobile2}`}>
+      <Link to={locations} className={`${classFormobile2}`}>
         <div className={`${classFormobile1}`}><IoLocationSharp  size={40}/></div>
-        <div >location</div>
+        <div>location</div>
       </Link>
+      
+      <Link to={skis} className={`${classFormobile2}`}>
+        <div className={`${classFormobile1}`}><IoLocationSharp  size={40}/></div>
+        <div>skis</div>
+      </Link>
+
+      <Link to={stay} className={`${classFormobile2}`}>
+        <div className={`${classFormobile1}`}><IoLocationSharp  size={40}/></div>
+        <div>Stay</div>
+      </Link>
+
     </header>
 )}
 
@@ -50,7 +61,9 @@ const Header: React.FC = () =>{
   const {cartProduct} = useContext(BaseContext);
 
   return(
-    <div className='text-[25px] flex items-center justify-between w-full h-[70px] bg-[rgb(240,_240,_240)] text-[#0a0a0a] max-exrtaSm:h-[50px] font-size: 20px; fixed z-[2]'> 
+
+
+    <div className='text-[25px] flex items-center justify-between w-full  h-[100px] bg-white  text-[#0a0a0a] max-exrtaSm:h-[50px] font-size: 20px; fixed z-[2]'> 
 
       {/*Кнопка для вывода меню для на моб. устройствах. Для для десктопа,планшета - спрятан.*/}
       <div onClick={()=>setMenuToggle(!menuToggle)} className='hidden max-sm:flex  w-11 '>
@@ -63,10 +76,7 @@ const Header: React.FC = () =>{
       </div>
 
        {/* ResoinsiveMenu (header) -  для десктопа */}
-       {ResoinsiveMenu(
-       ' flex justify-around items-center w-[90%] h-full max-sm:hidden',
-       'hidden','')
-       } 
+       {ResoinsiveMenu('flex justify-around items-center w-[90%] h-full max-sm:hidden','hidden','')} 
 
         {/*ResoinsiveMenu - (sidebar) для моб. устройств.*/}
 
@@ -90,6 +100,7 @@ const Header: React.FC = () =>{
         </div>
 
     </div>
+
   )
 }
 
